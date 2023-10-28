@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./styles.css";
 import List from "./List";
@@ -24,4 +24,5 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const root = createRoot(rootElement);
+root.render(<App />);
