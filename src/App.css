@@ -36,3 +36,103 @@
     transform: rotate(360deg);
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
+
+body{
+  background-color: #452B1D;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  font-family: "Concert One";  
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background-color: #DFA100;
+  width: auto;
+  padding: 0;
+  border-radius: 15px; 
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  will-change: transform;
+  transition: all 0.3s ease-in;
+}
+
+
+.item__score {  
+  flex: 3;
+  text-align: right;  
+  font-size: large;
+}
+
+.Leaderboard{
+  color: #A1A400;
+  object-position: center;
+  font-size: 300%;
+  
+}
+.item__time{
+  flex: 1;
+  width: 100px;
+  text-align: right;
+  font-size: large;
+}
+
+
+
+.item__index{
+  float: left;
+}
+
+.item__nickname{
+  float: left;
+  margin-left: 20px;
+}
+
+.itemOrientation {
+  justify-content: space-between;
+  background-color: #452B1D;
+  width: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  padding-left: 80px;
+  will-change: transform;
+  transition: all 0.3s ease-in;
+}
+
+
+
+.itemOrientation__score {
+  color: #D6D6D6;
+  flex: 3;
+  text-align: right;  
+  font-size: large;
+}
+
+.itemOrientation__time{
+  color: #D6D6D6;
+  flex: 1;
+  width: 100px;
+  text-align: right;
+  font-size: large;
+}
+
+.itemOrientation__nickname{
+  color: #D6D6D6;
+  font-size: large;
+}
