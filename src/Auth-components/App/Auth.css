@@ -1,3 +1,19 @@
 .wrapper {
-    padding: 20px;
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background-color: #DFA100;
+  width: auto;
+  padding: 0;
+  border-radius: 15px; 
+}
+.wrapper {
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  will-change: transform;
+  transition: all 0.3s ease-in;
 }

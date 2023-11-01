@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import "./styles.css";
 import "./Auth-components/App/Auth.css";
@@ -6,12 +6,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Dashboard from "./Auth-components/Dashboard/Dashboard";
 import Preferences from "./Auth-components/Preferences/Preferences";
+import useToken from './Auth-components/App/useToken';
 import Login from './Auth-components/Login/Login';
 import Leaderboard from "./Leaderboard";
 
-
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
   if(!token) {
     return <Login setToken={setToken} />
   }

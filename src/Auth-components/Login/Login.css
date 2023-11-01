@@ -1,5 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
+
 .login-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+  align-items: center;
+    background-color: #DFA100;
+    width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 20px;
+    font-family: sans-serif;
+  text-align: left;
+  font-family: "Concert One";
+  
+  }
+  
+.text{
+    font-size: 150%;
 }
+    
+  
+  input {
+    width: 100%;
+    padding: 20px;
+    
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #DCBF02;
+  }
+  
+  button {
+    display: flex;
+    background-color: #D9DD05;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #4285f4;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 150%;
+    font-family: sans-serif;
+    font-family: "Concert One";
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    will-change: transform;
+    background-color: #FAFF08;
+    transition: all 0.3s ease-in;
+  }
