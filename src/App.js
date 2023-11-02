@@ -8,7 +8,7 @@ import Dashboard from "./Auth-components/Dashboard/Dashboard";
 import Preferences from "./Auth-components/Preferences/Preferences";
 import useToken from './Auth-components/App/useToken';
 import Login from './Auth-components/Login/Login';
-import Leaderboard from "./Leaderboard";
+import Leaderboard from "./Leaderboard/Leaderboard";
 
 function App() {
   const { token, setToken } = useToken();
