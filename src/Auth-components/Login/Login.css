@@ -1,46 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
 
 .login-wrapper {
-    display: flex;
-    justify-content: center;
-  align-items: center;
-    background-color: #DFA100;
-    width: 300px;
-    margin: 0 auto;
-    padding: 5px;
-    border-radius: 20px;
-    font-family: sans-serif;
-  text-align: left;
-  font-family: "Concert One";
+  display: flex;
+  justify-content: center;
+ 
+  background-color: #DFA100;
+  width: 300px;
   
-  }
+  border-radius: 15px;
+  font-family: "Concert One";
+  margin-top: 150px;
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
   
 .text{
     font-size: 150%;
+   text-align: left;
+   padding-left: 10px;
+   
 }
     
   
-  input {
-    width: 100%;
-    padding: 20px;
-    
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background-color: #DCBF02;
-  }
+input {
+  height: 50px;
+  width: 250px;
+  text-align: center; 
+  
+  border: 1px solid #DCBF02;
+  border-radius: 15px;
+  background-color: #DCBF02;
+  margin-left: auto; 
+  margin-right: auto; 
+  
+
+  font-family: "Concert One";
+  font-size: 150%;
+}
   
   button {
+    justify-content: center;
+    width: 170px;
     display: flex;
     background-color: #D9DD05;
     color: #000000;
     padding: 10px;
-    border: 1px solid #4285f4;
+    border: 1px solid #D9DD05;
     border-radius: 15px;
     cursor: pointer;
     font-size: 150%;
     font-family: sans-serif;
     font-family: "Concert One";
     margin-top: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: auto; 
+    margin-right: auto; 
   }
   
   button:hover {
