@@ -49,7 +49,10 @@ body{
 .Greeting{
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  justify-content: space-between;
+  width: auto;
 }
 .Greeting__text{
   color: #A1A400;
@@ -61,11 +64,13 @@ body{
 .Greeting__icoL{
   width: 70px;
   height: 70px;
+  
 }
 
 .Greeting__icoR{
   width: 70px;
   height: 70px;
+  
 }
 
 .Medal{
@@ -136,4 +141,30 @@ body{
 
 .itemOrientation__index{
   padding-left: 20px;
+}
+
+.Greeting_user_account{
+  background-color: transparent;
+  border:none;
+  height: 70px;
+  width: 70px;
+  text-align: right; 
+  justify-content: flex-end;
+ 
+}
+
+.Greeting_user{
+  height: 70px;
+  width: 70px;
+  text-align: right; 
+  justify-content: flex-end;
+  
+}
+
+.Greet_txt{
+  display: flex;
+  justify-content: center;
+  object-position: center;
+  align-items: center;
+  flex-grow: 6;
 }

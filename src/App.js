@@ -9,6 +9,7 @@ import Preferences from "./Auth-components/Preferences/Preferences";
 import useToken from './Auth-components/App/useToken';
 import Login from './Auth-components/Login/Login';
 import Leaderboard from "./Leaderboard/Leaderboard";
+import UserAccount from "./Leaderboard/User_account/User_account"
 
 function App() {
   const { token, setToken } = useToken();
@@ -24,6 +25,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/preferences" element={<Preferences />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/account" element={<UserAccount />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>

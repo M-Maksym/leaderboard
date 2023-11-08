@@ -4,6 +4,9 @@ import List from "./List";
 import { getInitialData } from "./users_item.js";
 import greeting_icoR from './greeting_R.png';
 import greeting_icoL from './greeting_L.png';
+import user from './useracc.png';
+import { Link } from "react-router-dom";
+ 
 
 export default function Leaderboard() {
     const [data] = useState(getInitialData());
@@ -13,9 +16,16 @@ export default function Leaderboard() {
           <span className="Leaderboard">LEADERBOARD</span>
           <br />
           <div className="Greeting">
-          <img src={greeting_icoL} alt="Greeeting" className="Greeting__icoL" />
-            <span className="Greeting__text">You are better than {players}% of players</span>
-            <img src={greeting_icoR} alt="Greeeting" className="Greeting__icoR" />
+            <div className="Greet_txt">
+              <img src={greeting_icoL} alt="Greeeting" className="Greeting__icoL" />
+              <span className="Greeting__text">You are better than {players}% of players</span>
+              <img src={greeting_icoR} alt="Greeeting" className="Greeting__icoR" />
+              </div>
+              <button type="user_account" className="Greeting_user_account">
+                <Link to="/account">
+                  <img src={user} alt="user" className="Greeting_user" />
+                </Link>
+              </button>        
           </div>
           <br />
           <li className="itemOrientation">

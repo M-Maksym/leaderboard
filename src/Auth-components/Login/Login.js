@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
+import eye from './eye.png';
+import eye_off from './eye-off-outline.png';
+
 
 async function loginUser(credentials) {
  return fetch('http://localhost:8080/login', {
@@ -16,7 +19,7 @@ async function loginUser(credentials) {
 export default function Login({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-
+  const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
@@ -26,9 +29,12 @@ export default function Login({ setToken }) {
     setToken(token);
   }
 
-  return(
+  const handlePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+ }
+
+ return(
     <div className="login-wrapper">
-      
       <form onSubmit={handleSubmit}>
         <label>
           <p className='text'>login</p>
@@ -36,16 +42,20 @@ export default function Login({ setToken }) {
         </label>
         <label>
           <p className='text'>password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
+          <password>
+            <input type={showPassword ? 'text' : 'password'} onChange={e => setPassword(e.target.value)} className='Password'/>
+            <button type="button" className='eye' onClick={handlePasswordVisibility}>{showPassword ? <img src={eye_off} alt="Eye" className="Pass_eye" /> :<img src={eye} alt="Eye" className="Pass_eye" /> }</button>
+
+          </password>
         </label>
         <div>
-          <button type="sign_in">Sign In</button>
+          <button type="sign_in" className='sign_in'>Sign In</button>
         </div>
       </form>
     </div>
-  )
+ )
 }
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
+ setToken: PropTypes.func.isRequired
 };
