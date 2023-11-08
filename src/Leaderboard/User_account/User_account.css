@@ -1,0 +1,19 @@
+.Hello_user{
+    color: #A1A400;
+    object-position: center;
+    font-size: 350%;
+    
+  }
+
+.User_data{
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #DFA100;
+    border-radius: 15px;
+}
+
+.User_data_DefaultUser{
+    height: 100px;
+    width: 100px;
+}
