@@ -1,7 +1,7 @@
 .Hello_user{
     color: #A1A400;
     object-position: center;
-    font-size: 350%;
+    font-size: 400%;
     
   }
 
@@ -11,9 +11,44 @@
     justify-content: flex-start;
     background-color: #DFA100;
     border-radius: 15px;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    font-size:250%;
+    object-position: left ;
+    align-items: flex-start;
 }
 
 .User_data_DefaultUser{
     height: 100px;
     width: 100px;
+    padding-left: 15%;
+}
+
+.User_data_back{
+    height: 40px;
+    width: 40px;
+    background-color: #DFA100;
+    border-color: #DFA100;
+    border: #DFA100;
+}
+
+.User_data_text{
+   padding-left: 14%;
+}
+
+.User_data_Nick_edit{
+    height: 30px;
+    width: 30px;
+    background-color: #DFA100;
+    border-color: #DFA100;
+    border: #DFA100;
+    cursor: pointer;
+    padding-top: 2%;
+}
+
+.Nick{
+    display: flex;
+    padding-left: 14%;
 }
