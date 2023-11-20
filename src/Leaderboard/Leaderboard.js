@@ -6,10 +6,16 @@ import greeting_icoR from './greeting_R.png';
 import greeting_icoL from './greeting_L.png';
 import user from './useracc.png';
 import { Link } from "react-router-dom";
- 
+import useToken from "../useToken.js";
+import Login from "../Auth-components/Login/Login.js";
 
 export default function Leaderboard() {
     const [data] = useState(getInitialData());
+
+    const { token, setToken } = useToken();               //protection against unauthorized users
+    if(!token) {
+      return <Login setToken={setToken} />
+    };
     const players = 80;
     return(
         <div className="App">

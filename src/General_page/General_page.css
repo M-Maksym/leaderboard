@@ -1,0 +1,75 @@
+.General{
+  background-color: #452B1D;
+
+}
+
+
+
+.General_name{
+  color: #A1A400;
+  font-size: 350%;
+  display: block; 
+  margin: 0 auto;
+}
+  
+.General_head{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.General_head_rtext {
+  font-size: 200%;
+  text-align: right;
+  margin-right: 60px;
+  color: #D6D6D6;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    transition: all 0.4s;
+  }
+}
+
+  .General_head_rtext::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    width: 0px;
+    background-color: white;
+
+  }
+  .General_head_rtext:hover::after {
+    width: 100%;
+    transition: all 0.4s;
+  }
+
+.General_head_ltext{
+  text-decoration: none;
+  font-size: 200%;
+  text-align: left;
+  margin-left: 60px;
+  color: #D6D6D6;
+  
+  &:hover {
+    color: white;
+    transition: all 0.4s;
+  }
+}
+  .General_head_ltext::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    width: 0px;
+    background-color: white;
+
+  }
+  .General_head_ltext:hover::after {
+    width: 100%;
+    transition: all 0.4s;
+  }
