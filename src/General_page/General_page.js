@@ -14,7 +14,7 @@ export default function Dashboard() {
          </div>
 
         <div className='General_head'>
-            <Link to="/leaderboard" style={{ textDecoration: 'none' }}>
+            <Link to="/global-leaderboard" style={{ textDecoration: 'none' }}>
                 <h2 className='General_head_ltext' >Global leaderboard</h2>
             </Link>
 
