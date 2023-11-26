@@ -6,16 +6,14 @@ import eye_off from './eye-off-outline.png';
 
 
 async function loginUser(credentials) {
- return fetch('https://dummyjson.com/auth/login', {
+ return fetch('http://localhost:8080/login', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
    },
    body: JSON.stringify(credentials)
  })
- 
    .then(data => data.json())
-   //.then(console.log)
 }
 
 export default function Login({ setToken }) {

@@ -18,10 +18,11 @@ let user_avatar;
 //function for getting data about user from backend
 function get_data_from_server(token){
   const headers = {
-    Authorization: `Bearer ${token}`,
+    username: 'kminchelle',
+    password: '0lelplR',
   };
 
-  axios.get("https://your-server.com/api/users/me", { headers })
+  axios.get("https://dummyjson.com/auth/login", { headers })
     .then((response) => {
       const data = JSON.parse(response.data);
 
@@ -29,7 +30,7 @@ function get_data_from_server(token){
       name_user = data.name_user;
       surname = data.surname;
       nickname = data.nickname;
-      age = data.age;
+      age = data.id;
       score = data.score;
       user_avatar = data.avatar;
       

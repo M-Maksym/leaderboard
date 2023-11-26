@@ -14,7 +14,14 @@ let surname ;
 let nickname;
 let age;
 let score;
+
 let user_avatar;
+name_user = "mUser";
+  surname = "mSuper";
+
+  nickname = "mProGamer";
+  age = 17;
+  score = 1285234;
 
 //function for getting data about user from backend
 function get_data_from_server() {
@@ -54,7 +61,6 @@ function get_data_from_server() {
 
 
 
-
 export default function Account() {
   const [isEditMode, setIsEditMode] = useState(false);  //button for input
   const {token} = useToken();
@@ -68,11 +74,7 @@ export default function Account() {
     score: data.score,
     user_avatar: data.image,
   });
-  // name_user = "User";
-  // surname = "Super";
-  // nickname = "ProGamer";
-  // age = 17;
-  // score = 1234;
+  
   //get_data_from_server(token);
   
   
@@ -106,8 +108,7 @@ export default function Account() {
               })
               .catch((error) => {
                 console.log(error);
-              });
-         
+              })
           input.remove();
       }
   });
@@ -115,7 +116,7 @@ export default function Account() {
   };
 
   return(
-
+    
     <div className='Account'>
         <h1 className='Hello_user'>Hello, {name_user}!</h1>
         <div className='User_data'>
