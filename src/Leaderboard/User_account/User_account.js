@@ -9,35 +9,49 @@ import axios from "axios";
 
 
 
-let name_user = "User";
-let surname = "Super";
-let nickname = "ProGamer";
-let age = 17;
-let score = 1234;
+let name_user;
+let surname ;
+let nickname;
+let age;
+let score;
 let user_avatar;
 
 //function for getting data about user from backend
-function get_data_from_server(token){
+function get_data_from_server() {
   const headers = {
-    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
   };
-axios.get("https://your-server.com/api/users/me", { headers })
-    .then((response) => {
-      const data = JSON.parse(response.data);
-
-      //get user`s data from server
-      name_user = data.name_user;
-      surname = data.surname;
-      nickname = data.nickname;
-      age = data.age;
+  const credentials = {
+    username: 'kminchelle',
+    password: '0lelplR',
+  };
+  return fetch('https://dummyjson.com/auth/login', {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(credentials),
+  })
+  .then((response) => {
+    if (response.ok) {
+      const data = response.json();
+      //get user's data from server
+      name_user = data.firstName;
+      surname = data.lastName;
+      nickname = data.username;
+      age = data.id;
       score = data.score;
-      user_avatar = data.avatar;
-      
-    })
+      user_avatar = data.image;
+      console.log('success');
+      return data;
+    } else {
+      console.error('Error:', response.status);
+      return Promise.reject(new Error('Failed to fetch data'));
+    }
+  })
     .catch((error) => {
       console.log(error);
     });
-  }
+}
+
 
 
 
@@ -46,6 +60,21 @@ export default function Account() {
   const {token} = useToken();
   get_data_from_server(token);
 
+  const [userData, setUserData] = useState({
+    name: data.firstName,
+    surname: data.lastName,
+    nickname: data.username,
+    age: data.id,
+    score: data.score,
+    user_avatar: data.image,
+  });
+  // name_user = "User";
+  // surname = "Super";
+  // nickname = "ProGamer";
+  // age = 17;
+  // score = 1234;
+  //get_data_from_server(token);
+  
   
   const handleClick = () => {
     // make new input
