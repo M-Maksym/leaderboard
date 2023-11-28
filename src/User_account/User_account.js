@@ -5,41 +5,52 @@ import ArrrowBack from './back.png';
 import EditPencil from './pencil.png';
 import { Link } from "react-router-dom";
 import useToken from "../useToken";
-import axios from "axios";
 import Login from '../Auth-components/Login/Login';
 
-let name_user = "User";
+let name_user = "User";                   //default variable
 let surname = "Super";
-let nickname = "ProGamer";
+let nickname = "mProGamer";
 let age = 17;
 let score = 1234;
 let user_avatar;
+let id;
 
 //function for getting data about user from backend
 function get_data_from_server(token){
-  const headers = {
+  const credentials = {
     username: 'kminchelle',
     password: '0lelplR',
   };
+  console.log('start fetch');
+  return fetch('https://dummyjson.com/auth/login', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(credentials)
+  
+})
+.then(data => data.json())
+.then(response => {
+  console.log(response);
+  const user = response; // Get the user object from the response
+  name_user = user.firstName;
+  surname = user.lastName;
+  nickname = user.username;
+  age = user.id;
+  score = user.id;
+  user_avatar = user.image;
+  id = user.id;
+  console.log('success');
+})
+.catch((error) => {
+  console.error(error);
+});
+}
 
-  axios.get("https://dummyjson.com/auth/login", { headers })
-    .then((response) => {
-      const data = JSON.parse(response.data);
-
-      //get user`s data from server
-      name_user = data.name_user;
-      surname = data.surname;
-      nickname = data.nickname;
-      age = data.id;
-      score = data.score;
-      user_avatar = data.avatar;
-      
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  }
-
+export function getID(){
+  return id;
+}
 
 
 export default function Account() {
@@ -72,17 +83,15 @@ export default function Account() {
         
           nickname = input.value;
           
-          const NewNickname = {
-            Nickname: nickname
-          };
-          
-          axios.put("https://your-server.com/api/users/me", NewNickname)
-              .then((response) => {
-                console.log(response.data)      
+          fetch('https://dummyjson.com/users/15', {
+              method: 'PUT', /* or PATCH */
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                username: nickname
               })
-              .catch((error) => {
-                console.log(error);
-              });
+            })
+            .then(res => res.json())
+            .then(console.log);
          
           input.remove();
       }

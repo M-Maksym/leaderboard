@@ -13,6 +13,8 @@ import GlobalLeaderboard from './Global_Leaderboard/Global _Leaderboard'
 function App() {
   return (
     <div className="App">
+
+      
       
       <BrowserRouter>
         <Routes>

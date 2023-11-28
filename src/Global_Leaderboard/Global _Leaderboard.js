@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Lead_styles.css";
+import "./GLead_styles.css";
 import List from "./List.js";
 import { getInitialData } from "./users_item.js";
 import { Link } from "react-router-dom";
