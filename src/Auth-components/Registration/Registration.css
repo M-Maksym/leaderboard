@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+ 
+  background-color: #DFA100;
+  width: 300px;
+  
+  border-radius: 15px;
+  font-family: "Concert One";
+  margin-top: 150px;
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+  
+.text{
+    font-size: 150%;
+   text-align: left;
+   padding-left: 10px;
+   
+}
+    
+  
+input {
+  height: 50px;
+  width: 250px;
+  text-align: center; 
+  
+  border: 1px solid #DCBF02;
+  border-radius: 15px;
+  background-color: #DCBF02;
+  margin-left: auto; 
+  margin-right: auto; 
+  
+
+  font-family: "Concert One";
+  font-size: 150%;
+}
+
+.Password{
+  width: 210px;
+}
+  
+  .sign_in {
+    justify-content: center;
+    width: 170px;
+    display: flex;
+    background-color: #D9DD05;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #D9DD05;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 150%;
+    font-family: sans-serif;
+    font-family: "Concert One";
+    margin-top: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .sign_in:hover {
+    will-change: transform;
+    background-color: #FAFF08;
+    transition: all 0.3s ease-in;
+  }
+
+  password{
+    
+   display: flex;
+    background-color: #DCBF02;
+    border-radius: 20px;
+    border: 1px;
+    height: 55px;
+    width: 250px;
+  text-align: center; 
+  
+  border: 1px solid #DCBF02;
+  border-radius: 15px;
+  background-color: #DCBF02;
+  box-sizing: border-box;
+  }
+  .Pass_eye{
+    width: 30px;
+    border-color: #000000;
+    background-color: #DCBF02;
+    
+  }
+.eye{
+  padding: 0;
+  background-color: #DCBF02;
+  border: none;
+  border-radius: 15px;
+}
