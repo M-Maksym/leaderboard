@@ -12,20 +12,25 @@ import Login from "../Auth-components/Login/Login.js";
 
 let g_index = 10;
 let u_index = 10;
+// eslint-disable-next-line
+let count = 0;
 
 export function sendIndex(global_index, user_index){
   g_index = global_index;
   u_index = user_index;
 }
 
+
+
 export default function Leaderboard() {
     const [data] = useState(getInitialData());
     const { token, setToken } = useToken();               
     const [players, setPlayers] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => {                           //update procent
     const timerId = setInterval(() => {
       let updatedProcent = 100 - (u_index * 100) / g_index;
+      Math.round(updatedProcent);
       setPlayers(updatedProcent); // Update the players state
       console.log('Update players procent: ' + updatedProcent);
     }, 2000); // Update every 2 seconds
@@ -63,7 +68,7 @@ export default function Leaderboard() {
             <span className="itemOrientation__time">Time</span>
           </li>
           <List data={data} />
-         
+
         </div>
         
     );
