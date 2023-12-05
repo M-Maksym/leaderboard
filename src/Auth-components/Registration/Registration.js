@@ -1,76 +1,137 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './Registration.css';
 import eye from './eye.png';
 import eye_off from './eye-off-outline.png';
 
-async function addUser(credentials) {                   //registration
-  fetch('https://dummyjson.com/users/add', {
+
+function addUser(credentials) {                   //registration
+  return fetch('https://dummyjson.com/users/add', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 
+      'Content-Type': 'application/json' 
+    },
     body: JSON.stringify(credentials)
   })
   .then(res => res.json())
 }
 
 
-async function loginUser(credentials) {
- return fetch('https://dummyjson.com/auth/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
-
+const showMessageConsole = (mes) =>{
+  console.log(mes);
 }
 
-export default function Registration({ setToken }) {
+
+export default function Registration() {
   const [login, setLogin] = useState();                     //login
   const [password, setPassword] = useState();               //password
+  const [repeatPassword, setRepeatPassword] = useState();   //repeat password
   const [name, setName] = useState();                       //name
   const [surname, setSurname] = useState();                 //surname
   const [nickname, setNickname] = useState();               //nickname
-  const [dateOfBirth, setDateOfBirth] = useState();         //date of birth
-
+  const [age, setAge] = useState();         //age
   const [showPassword, setShowPassword] = useState(false);
+  const [messager, setMessage] = useState(""); 
   const handleSubmit = async e => {
     e.preventDefault();
-    const token = await loginUser({
-      username,
-      password
-    });
-    setToken(token);
-  }
+    if (password !== repeatPassword) {
+      console.error('Passwords do not match');
+      return;
+    }
 
+  }
+  // eslint-disable-next-line
+  let message;
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
  }
+ // eslint-disable-next-line
+ const showMessage = (messager) => {
+
+  setMessage(messager)};
+
 
  return(
-    <div className="login-wrapper">
+  
+    <div className="registration-wrapper">
+      
       <form onSubmit={handleSubmit}>
-        <label>
-          <p className='text'>login</p>
-          <input type="text" onChange={e => setUserName(e.target.value)} />
+        <h1>Registration Form</h1>
+        <label className='firstString'>
+          <div className='firstString_name'>
+            <p className='text'>Name</p>
+            <input type="text" onChange={e => setName(e.target.value)} />
+          </div>
+          <div className='firstString_surname'>
+            <p className='text'>Surname</p>
+            <input type="text" onChange={e => setSurname(e.target.value)} />
+          </div>
         </label>
-        <label>
-          <p className='text'>password</p>
-          <password>
-            <input type={showPassword ? 'text' : 'password'} onChange={e => setPassword(e.target.value)} className='Password'/>
-            <button type="button" className='eye' onClick={handlePasswordVisibility}>{showPassword ? <img src={eye_off} alt="Eye" className="Pass_eye" /> :<img src={eye} alt="Eye" className="Pass_eye" /> }</button>
 
-          </password>
+        <label className='secondString'>
+          <div className='secondString_nickname'>
+            <p className='text'>Nickname</p>
+            <input type="text" onChange={e => setNickname(e.target.value)} />
+          </div>
+            <div className='secondString_dateOfBirth'>
+              <p className='text'>Age</p>
+              <input type="text" onChange={e => setAge(e.target.value)} />
+            </div>
         </label>
+        
+        <div className='loginAndPassword'>
+          <label className='login'>
+            <p className='text'>Login</p>
+            <input type="text" className = 'registrationInput' onChange={e => setLogin(e.target.value) } />
+          </label>
+
+          <label className='password'>
+            <p className='text'>Password</p>
+            <passwordr>
+              <input type={showPassword ? 'text' : 'password'} className="Passwordr" onChange={e => setPassword(e.target.value)} />
+              <button type="button" className='eye' onClick={handlePasswordVisibility}>
+                {showPassword ? 
+                          <img src={eye_off} alt="Eye" className="Pass_eye" /> 
+                          :<img src={eye} alt="Eye" className="Pass_eye" /> }
+              </button>
+            </passwordr>
+          </label>
+
+          <label className='password'>
+            <p className='text'>Repeat password</p>
+            <passwordr>
+              <input type={showPassword ? 'text' : 'password'} onChange={e => setRepeatPassword(e.target.value)} className='Passwordr'/>
+              <button type="button" className='eye' onClick={handlePasswordVisibility}>
+                {showPassword ? 
+                        <img src={eye_off} alt="Eye" className="Pass_eye" /> 
+                        :<img src={eye} alt="Eye" className="Pass_eye" /> }
+              </button>
+            </passwordr>
+          </label>
+        </div>
         <div>
-          <button type="sign_in" className='sign_in'>Sign In</button>
+        {messager && (
+        <div className="message">
+          {messager}
+        </div>
+      )}
+        <button type="create_account" className='create_account'
+            onClick={() => {
+              message = addUser({
+                firstName: name,
+                lastName: surname,
+                username: nickname,
+                age: age,
+                email:login,
+                password: password
+              });
+              showMessageConsole(message);
+              showMessage("Successfuly, \nyou can come back and log in!\n");              
+              }}>
+            CREATE ACCOUNT
+          </button>
         </div>
       </form>
+
     </div>
  )
 }
-
-Login.propTypes = {
- setToken: PropTypes.func.isRequired
-};

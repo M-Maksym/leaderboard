@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import './Login.css';
 import eye from './eye.png';
 import eye_off from './eye-off-outline.png';
@@ -49,6 +50,9 @@ export default function Login({ setToken }) {
 
           </password>
         </label>
+        <Link to="/registration" style={{ textDecoration: 'none' }}>
+                <h2 className="registration" >You haven`t account?</h2>
+            </Link>
         <div>
           <button type="sign_in" className='sign_in'>Sign In</button>
         </div>

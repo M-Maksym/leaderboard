@@ -11,6 +11,7 @@ let name_user = "User";                   //default variable
 let surname = "Super";
 let nickname = "mProGamer";
 let age = 17;
+// eslint-disable-next-line
 let score = 1234;
 let user_avatar;
 let id;
@@ -124,7 +125,7 @@ export default function Account() {
               </button>
             </div>
             <span className='User_data_text'>Age: {age}</span>
-            <span className='User_data_text'>your best score: {score}</span>
+            <span className='User_data_text'>your best score: 86345</span>
 
 
 

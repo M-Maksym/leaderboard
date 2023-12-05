@@ -7,61 +7,50 @@ body{
 .App {
   font-family: sans-serif;
   text-align: center;
-  font-family: "Concert One";  
+  font-family: "Concert One"; 
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
 }
 
-.item {
+.items {
+  font-size: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   margin: 10px;
   background-color: #DFA100;
-  width: auto;
+
   padding: 0;
   border-radius: 15px; 
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+ flex-basis: 50px;
   margin-right: 100px;
   margin-left: 100px;
   will-change: transform;
   transition: all 0.3s ease-in;
+  height: 50px;
 }
 
-.item_u {
+.item_user {
+  font-size: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   margin: 10px;
   background-color: #D9DD05;
-  width: auto;
+
   padding: 0;
   border-radius: 15px; 
-}
-
-.item_u {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+ flex-basis: 50px;
   margin-right: 100px;
   margin-left: 100px;
   will-change: transform;
   transition: all 0.3s ease-in;
+  height: 50px;
 }
 
-
-.item__score {  
-  flex: 3;
-  text-align: right;  
-  font-size: 150%;
-}
 
 .leaderboard{
   color: #A1A400;
@@ -96,34 +85,41 @@ body{
   
 }
 
-.Medal{
+.Medall{
   width: 25px;
   height: 25px;
- 
+
 }
 
-.item__time{
+.item_time{
   flex: 1;
-  width: 100px;
-  text-align: right;
+  width: 120px;
+  text-align: center;
   font-size: 150%;
-  margin-right: 50px;
+  margin-right: 15px;
+
 }
 
 
 
-.item__index{
-  float: left;
+.item_index{
+  width: 20px;
   font-size: 150%;
   padding-left: 20px;
 }
 
-.item__nickname{
-  float: left;
+.item_nickname{
+  width:690px;
   margin-left: 20px;
   font-size: 150%;
+  text-align: left;
 }
-
+.item_score {
+  width: 100px;
+  flex: 3;
+    text-align: center;  
+    font-size: 150%;
+  }
 .itemOrientation {
   justify-content: space-between;
   background-color: #452B1D;
@@ -143,6 +139,7 @@ body{
 
 
 .itemOrientation__score {
+  margin-left: 40px;
   color: #D6D6D6;
   flex: 3;
   text-align: right;  

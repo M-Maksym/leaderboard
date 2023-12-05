@@ -10,7 +10,7 @@ export default function Dashboard() {
   return(
     <div className='General'>
          <div className='General_name'>
-           Name of the game
+          Haven's door
          </div>
 
         <div className='General_head'>

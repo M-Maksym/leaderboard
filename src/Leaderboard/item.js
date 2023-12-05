@@ -28,13 +28,13 @@ export default function Item({ row }) {
   let medalImage = "";
   if (index / 2 === 1) {
     medalImage = Gold;
-    Ind = <img src={medalImage} alt="Medal" className="Medal" />;
+    Ind = <img src={medalImage} alt="Medall" className="Medal" />;
   } else if (index / 2 === 2) {
     medalImage = Silver;
-    Ind = <img src={medalImage} alt="Medal" className="Medal" />;
+    Ind = <img src={medalImage} alt="Medall" className="Medal" />;
   } else if (index / 2 === 3) {
     medalImage = Bronze;
-    Ind = <img src={medalImage} alt="Medal" className="Medal" />;
+    Ind = <img src={medalImage} alt="Medall" className="Medal" />;
   } else {
     Ind = index / 2;
   }
@@ -42,17 +42,17 @@ export default function Item({ row }) {
 
   const isUserItem = row.id === id;
 
-  const className = isUserItem ? "item_u" : "item";
+  const className = isUserItem ? "item_user" : "items";
   isUserItem ? user_index = parseInt(Ind, 10) : global_index = parseInt(Ind, 10);
   sendIndex(global_index, user_index);
   
-    
+
       return (
         <li className={className}>
-          <span className="item__index">{Ind}</span>
-          <span className="item__nickname">{row.firstName}</span>
-          <span className="item__score">{row.age}00</span>
-          <span className="item__time">{row.id}:00:00</span>
+          <span className="item_index">{Ind}</span>
+          <span className="item_nickname">{row.attributes.nickname}</span>
+          <span className="item_score">{row.attributes.score}</span>
+          <span className="item_time">{row.attributes.time}</span>
         </li>
         
       );

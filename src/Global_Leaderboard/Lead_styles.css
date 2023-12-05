@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
+
+body{
+  background-color: #452B1D;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  font-family: "Concert One";  
+}
+
+.App_head{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  background-color: #DFA100;
+  width: auto;
+  padding: 0;
+  border-radius: 15px; 
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  will-change: transform;
+  transition: all 0.3s ease-in;
+}
+
+
+.item__score {  
+  flex: 3;
+  text-align: right;  
+  font-size: 150%;
+}
+
+.Leaderboard{
+ 
+  object-position: center;
+  font-size: 350%;
+  color: #D6D6D6;
+  
+  &:hover {
+    color: white;
+    transition: all 0.5s;
+  }
+  
+}
+.Greeting{
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  justify-content: space-between;
+  width: auto;
+}
+.Greeting__text{
+  color: #A1A400;
+  object-position: center;
+  font-size: 250%;
+  
+}
+
+.Greeting__icoL{
+  width: 70px;
+  height: 70px;
+  
+}
+
+.Greeting__icoR{
+  width: 70px;
+  height: 70px;
+  
+}
+
+.Medal{
+  width: 25px;
+  height: 25px;
+ 
+}
+
+.item__time{
+  flex: 1;
+  width: 100px;
+  text-align: right;
+  font-size: 150%;
+}
+
+
+
+.item__index{
+  float: left;
+  font-size: 150%;
+  padding-left: 20px;
+}
+
+.item__nickname{
+  float: left;
+  margin-left: 20px;
+  font-size: 150%;
+}
+
+.itemOrientation {
+  justify-content: space-between;
+  background-color: #452B1D;
+  width: auto;  
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin: 10px;
+  padding-left: 80px;
+  margin-right: 100px;
+  margin-left: 100px;
+  will-change: transform;
+  transition: all 0.3s ease-in;
+}
+
+
+
+.itemOrientation__score {
+  color: #D6D6D6;
+  flex: 3;
+  text-align: right;  
+  font-size: 150%;
+}
+
+.itemOrientation__time{
+  color: #D6D6D6;
+  flex: 1;
+  width: 100px;
+  text-align: right;
+  font-size: 150%;
+  margin-right: 50px;
+}
+
+.itemOrientation__nickname{
+  color: #D6D6D6;
+  font-size: 150%;
+}
+
+.itemOrientation__index{
+  padding-left: 20px;
+}
+
+.Greeting_user_account{
+  background-color: transparent;
+  border:none;
+  height: 70px;
+  width: 70px;
+  text-align: right; 
+  justify-content: flex-end;
+ 
+}
+
+.Greeting_user{
+  height: 70px;
+  width: 70px;
+  text-align: right; 
+  justify-content: flex-end;
+  
+}
+
+.Greet_txt{
+  display: flex;
+  justify-content: center;
+  object-position: center;
+  align-items: center;
+  flex-grow: 6;
+}
+
+.App_head_back{
+  height: 50px;
+  width: 50px;
+  margin-left: 100px;
+  margin-top: 10px;
+  background-color: #452B1D;
+  border-color: #452B1D;
+  border: #452B1D;
+}
+
+.App_head_user_account{
+  height: 50px;
+  width: 100px;
+  background-color: #452B1D;
+  border-color: #452B1D;
+  border: #452B1D;
+}
+
+.Login{
+  text-decoration: none;
+  font-size: 200%;
+  text-align: left;
+  margin-right: 130px;
+
+  color: #D6D6D6;
+  
+  &:hover {
+    color: white;
+    transition: all 0.4s;
+  }
+}
+  .Login::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    width: 0px;
+    background-color: white;
+
+  }
+  .Login:hover::after {
+    width: 100%;
+    transition: all 0.4s;
+  }

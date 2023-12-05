@@ -10,18 +10,20 @@
   font-size: 350%;
   display: block; 
   margin: 0 auto;
+  margin-top: 10px;
 }
   
 .General_head{
   display: flex;
   justify-content: center;
   justify-content: space-between;
+  margin-top: 15px;
 }
 
 .General_head_rtext {
   font-size: 200%;
   text-align: right;
-  margin-right: 60px;
+  margin-right: 120px;
   color: #D6D6D6;
   cursor: pointer;
   &:hover {
@@ -50,7 +52,7 @@
   text-decoration: none;
   font-size: 200%;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 100px;
   color: #D6D6D6;
   
   &:hover {
@@ -72,4 +74,8 @@
   .General_head_ltext:hover::after {
     width: 100%;
     transition: all 0.4s;
+  }
+
+  .General_body{
+    margin-top: 30px;
   }

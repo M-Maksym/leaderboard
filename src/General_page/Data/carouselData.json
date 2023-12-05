@@ -1,24 +1,16 @@
 {
     "slides": [
       {
-        "src": "https://picsum.photos/seed/img1/1500/500",
+        "src": "http://localhost:1337/uploads/Figma_Fq_V_Bsif_Hu_V_8f095de549.png",
         "alt": "Image 1 for carousel"
       },
       {
-        "src": "https://picsum.photos/seed/img2/1500/500",
+        "src": "http://localhost:1337/uploads/Figma_Mm_H_Hf7_P0i_G_78e0306481.png",
         "alt": "Image 2 for carousel"
       },
       {
-        "src": "https://picsum.photos/seed/img3/1500/500",
+        "src": "http://localhost:1337/uploads/Figma_Rz02p_Mjted_1b220dba9f.png",
         "alt": "Image 3 for carousel"
-      },
-      {
-        "src": "https://picsum.photos/seed/img4/1500/500",
-        "alt": "Image 4 for carousel"
-      },
-      {
-        "src": "https://picsum.photos/seed/img5/1500/500",
-        "alt": "Image 5 for carousel"
       }
     ]
 }

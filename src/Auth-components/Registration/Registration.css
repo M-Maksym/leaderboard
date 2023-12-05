@@ -1,82 +1,149 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One:wght@400;700&display=swap");
 
-.login-wrapper {
+.registration-wrapper {
   display: flex;
   justify-content: center;
  
   background-color: #DFA100;
-  width: 300px;
+  width: 900px;
   
   border-radius: 15px;
   font-family: "Concert One";
-  margin-top: 150px;
+  margin-top: 50px;
   text-align: center; 
   margin-left: auto; 
   margin-right: auto; 
 }
   
+.firstString{
+  display: flex;
+
+}
+
+.firstString_name{
+  padding-right: 50px;
+}
+.firstString_surname{
+  padding-left: 50px;
+}
+
+.secondString{
+  display: flex;
+}
+.secondString_nickname{
+  padding-right: 50px;
+}
+.secondString_dateOfBirth{
+  padding-left: 50px;
+}
+
+.login{
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.password{
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .text{
     font-size: 150%;
    text-align: left;
    padding-left: 10px;
    
 }
-    
+
+.loginAndPassword{
+  display: inline-block;
+}
   
 input {
   height: 50px;
   width: 250px;
   text-align: center; 
-  
   border: 1px solid #DCBF02;
   border-radius: 15px;
   background-color: #DCBF02;
   margin-left: auto; 
   margin-right: auto; 
-  
+  outline: none;
 
   font-family: "Concert One";
   font-size: 150%;
 }
 
-.Password{
-  width: 210px;
+.Passwordr{
+  width: 420px;
+  border: none;
+  outline: none;
 }
-  
-  .sign_in {
+
+
+
+.message {
+  justify-content: center;
+  width: 250px;
+  display: flex;
+  background-color: #DCBF02;
+  color: #000000;
+  padding: 15px;
+  border: 1px solid #DCBF02;
+  border-radius: 15px;
+
+  font-size: 100%;
+  font-family: sans-serif;
+  font-family: "Concert One";
+  margin-top: 20px;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.message:hover {
+  will-change: transform;
+  background-color: #FAFF08;
+  transition: all 0.3s ease-in;
+}
+
+  .create_account {
     justify-content: center;
-    width: 170px;
+    width: 250px;
     display: flex;
     background-color: #D9DD05;
     color: #000000;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #D9DD05;
     border-radius: 15px;
     cursor: pointer;
     font-size: 150%;
     font-family: sans-serif;
     font-family: "Concert One";
-    margin-top: 10px;
+    margin-top: 20px;
     flex-grow: 1;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-left: auto; 
     margin-right: auto; 
   }
   
-  .sign_in:hover {
+  .create_account:hover {
     will-change: transform;
     background-color: #FAFF08;
     transition: all 0.3s ease-in;
   }
 
-  password{
+  passwordr{
     
    display: flex;
     background-color: #DCBF02;
     border-radius: 20px;
     border: 1px;
     height: 55px;
-    width: 250px;
+    width: 400px;
   text-align: center; 
   
   border: 1px solid #DCBF02;
@@ -95,4 +162,13 @@ input {
   background-color: #DCBF02;
   border: none;
   border-radius: 15px;
+}
+
+.text{
+  margin-bottom: 2px;
+}
+
+.registrationInput{
+  width: 400px;
+  outline: none;
 }
